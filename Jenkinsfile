@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'BUILD'
-		sh '''
-            echo "Hola desde dentro"
-        '''
+        sh 'docker build -t app .'
       }
     }
     post {
